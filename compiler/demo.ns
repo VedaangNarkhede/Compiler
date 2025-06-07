@@ -1,0 +1,83 @@
+number a = 2;
+number b = 9;
+word c = "hello";
+for number i = 0 to 4, 1
+    print(a + i);
+end
+print(c);
+
+
+if (a && b) {
+print("Both true");
+}
+
+if (a and b) {
+print("Both true");
+}
+
+if (a || b) {
+    print("One true");
+}
+
+if (a or b) {
+    print("One true");
+}
+
+letter d = 'A';
+print(d);
+
+word s = "hello";
+print(s);
+
+if (a > 0) {
+    print("Positive");
+} else {
+    print("Non-positive");
+}
+
+number j = 0;
+while (j < 5) {
+    print(j);
+    j++;
+}
+
+
+for number k = 1 to 5, 1
+    print(k);
+end
+
+for number l = 5 to 1, -1
+    print(l);
+end
+
+switch (a) {
+    case 1 {
+        print("One");
+    }
+    case 2 {
+        print("Two");
+    }
+    default {
+        print("Other");
+    }
+}
+
+for number m = 0 to 10, 1
+    if (m == 5) {
+        break;
+    }
+    print(m);
+end
+
+
+struct Person
+{
+    number age;
+    letter initial;
+};
+struct Person p;
+p.age = 10;
+p.initial = 'h';
+print(p.age);
+print(p.initial);
+print("hello");

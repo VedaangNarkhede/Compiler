@@ -1,0 +1,21 @@
+CXX         = g++
+BISON       = win_bison
+FLEX        = win_flex
+LLVM_CONFIG = llvm-config
+
+CXXFLAGS = -std=c++11 -Wno-register `$(LLVM_CONFIG) --cxxflags`
+LDFLAGS  = `$(LLVM_CONFIG) --ldflags --system-libs --libs core`
+
+all: compiler
+
+proj.tab.c proj.tab.h: proj.y
+	$(BISON) -d -o proj.tab.c proj.y
+
+lex.yy.c: proj.l proj.tab.h
+	$(FLEX) proj.l
+
+compiler: proj.tab.c lex.yy.c compiler.cpp
+	$(CXX) -o compiler proj.tab.c lex.yy.c compiler.cpp $(CXXFLAGS) $(LDFLAGS)
+
+clean:
+	rm -f compiler lex.yy.c proj.tab.c proj.tab.h
