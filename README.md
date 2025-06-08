@@ -26,11 +26,11 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/nanoscript-compiler.git
+   git clone https://github.com/VedaangNarkhede/Compiler.git 
    ```
 2. **Navigate to the project directory**:
    ```bash
-   cd nanoscript-compiler
+   cd compiler_directory
    ```
 3. **Build the project**:
    ```bash
@@ -48,15 +48,15 @@ Here’s a basic NanoScript program:
 
 ```nanoscript
 number x = 10;
-for number i = 0 to 4, 1 {
+for number i = 0 to 4, 1 
     print(x + i);
-}
+end
 ```
 
-1. Save it as `example.ns`.
+1. Save it as `demo.ns`.
 2. Compile it:
    ```bash
-   compiler.exe example.ns
+   compiler.exe demo.ns
    ```
 3. Run the output:
    ```bash
@@ -91,4 +91,4 @@ for number i = 0 to 4, 1 {
 | IR Generation     | LLVM       |
 | Lexical Analysis  | Flex       |
 | Parsing           | Bison      |
-| Compiler          | Clang      |
+| Executable        | Clang      |
